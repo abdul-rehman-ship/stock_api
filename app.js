@@ -14,7 +14,7 @@ var searchRouter = require('./routes/search');
 var apiRouter = require('./routes/api');
 
 var app = express();
-app.listen(5000,()=>{
+app.listen(5000 || process.env.PORT,()=>{
   console.log("server is running a 5000");
 })
 app.get("/",(req,res)=>{
